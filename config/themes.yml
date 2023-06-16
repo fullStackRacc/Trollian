@@ -1,4 +1,7 @@
 default: styles/application.scss
+homestuck: styles/Homestuck.scss
+trollian: styles/Trollian.scss
+alt-trollian: styles/NewAlternian.scss
 contrast: styles/contrast.scss
 mastodon-light: styles/mastodon-light.scss
 macaron: styles/macaron.scss

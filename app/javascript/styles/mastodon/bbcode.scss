@@ -1,0 +1,218 @@
+$bbcode1: $classic-highlight-color !default;
+$bbcode2: lighten($black, 15%) !default;
+
+.faicon_FTL {
+  display: none;
+}
+@font-face {
+  font-family: "Cute";
+  src: url(fonts/My_First_Crush.woff);
+}
+
+@font-face {
+  font-family: "Pappy";
+  src: url(fonts/Papyrus-Regular.woff);
+}
+
+@font-face {
+  font-family: "TrollType";
+  src: url(fonts/oldalternianTrollType-NormalRegular.woff);
+}
+
+@font-face {
+  font-family: "YANDERE";
+  src: url(fonts/YANDERE.woff);
+}
+
+@font-face {
+  font-family: "comicpapyrus";
+  src: url(fonts/Comic_Parchment.woff);
+}
+
+@font-face {
+  font-family: "NewAlternianCourier";
+  src: url(fonts/alternialiased.woff);
+}
+
+@font-face {
+    font-family: "NewAlternian";
+    src: url(fonts/NewAlternianVers3-Regular.woff);
+  }
+
+.bbcode__s {
+  text-decoration: line-through;
+}
+
+.bbcode__b {
+    font-weight: 900;
+}
+
+.bbcode__i {
+    font-style: italic;
+    -webkit-font-feature-settings: "ital";
+    font-feature-settings: "ital";
+}
+
+div.quote {
+  border: solid $darker-text-color 1px;
+  margin-left: 20px;
+}
+
+pre {
+  border: solid $darker-text-color 1px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1
+  }
+
+  to {
+    opacity: .5
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1
+  }
+
+  to {
+    opacity: .5
+  }
+}
+
+.bbcode__pulse {
+  -webkit-animation: pulse 1s ease-in-out infinite;
+  animation: pulse 1s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate
+}
+
+.bbcode__spin {
+    display: inline-block;
+    -webkit-animation: fa-spin 4s infinite linear;
+    animation: fa-spin 4s infinite linear;
+}
+
+.bbcode__flip-horizontal {
+    display: inline-block;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+}
+
+.bbcode__flip-vertical {
+    display: inline-block;
+    transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+}
+
+.bbcode__color {
+    color: attr(data-bbcodecolor color);
+}
+
+.bbcode__size {
+    size: attr(data-bbcodesize size);
+}
+
+.bbcode__colorhex {
+    color: attr(data-bbcodecolor colorhex);
+}
+
+.bbcode__hex {
+    color: attr(data-bbcodecolor colorhex);
+}
+
+.bbcode__quote {
+    padding: 10px 10px;
+    border-left: 5px solid $bbcode1;
+}
+
+.bbcode__code {
+    display: block;
+    padding: 9px;
+    line-height: 1.42857143;
+    color: $white;
+    /*
+    old code was
+    word-break: break-all;
+    word-wrap: break-word;
+    */
+    word-break: normal;
+    word-wrap: normal;
+    background-color: $bbcode2;
+    border: 1px solid $bbcode2;
+    border-radius: 4px;
+    overflow-x: scroll;
+}
+
+.bbcode__caps {
+    text-transform: uppercase;
+}
+
+.bbcode__lower {
+    text-transform: lowercase;
+}
+
+.bbcode__kan {
+    text-transform: capitalize;
+  }
+
+.bbcode__comic {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+.bbcode__doc {
+    color: rgba(0, 0, 0, 0.0);
+  }
+
+.bbcode__hs {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+.bbcode__cute2 {
+    font-family: "YANDERE";
+  }
+
+.bbcode__oa {
+    font-family: "TrollType";
+  }
+
+.bbcode__sc {
+    font-variant: small-caps;
+  }
+
+.bbcode__impact {
+    font-family: "Impact", Charcoal, sans-serif;
+  }
+
+.bbcode__luci {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   }
+
+.bbcode__pap {
+    font-family: "Pappy";
+  }
+
+.bbcode__copap {
+    font-family: "comicpapyrus";
+  }
+
+.bbcode__na {
+    font-family: "NewAlternian";
+  }
+
+.bbcode__cute {
+    font-family: "Cute";
+  }
+
+.bbcode__nac{
+    font-family: "NewAlternianCourier";
+    font-size: 6px;
+  }
+
+.bbcode__faicon {
+    display: inline-block !important;
+  }

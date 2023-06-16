@@ -37,6 +37,9 @@ const messages = defineMessages({
   personal: { id: 'navigation_bar.personal', defaultMessage: 'Personal' },
   security: { id: 'navigation_bar.security', defaultMessage: 'Security' },
   menu: { id: 'getting_started.heading', defaultMessage: 'Getting started' },
+  rules: { id: 'getting_started.rules', defaultMessage: 'Rules' },
+  quirk: { id: 'getting_started.quirk', defaultMessage: 'Quirk Guide' },
+  discord: { id: 'getting_started.discord', defaultMessage: 'Discord' },
 });
 
 const mapStateToProps = state => ({
@@ -115,6 +118,8 @@ class GettingStarted extends ImmutablePureComponent {
         <ColumnLink key='direct' icon='at' text={intl.formatMessage(messages.direct)} to='/conversations' />,
         <ColumnLink key='bookmark' icon='bookmark' text={intl.formatMessage(messages.bookmarks)} to='/bookmarks' />,
         <ColumnLink key='favourites' icon='star' text={intl.formatMessage(messages.favourites)} to='/favourites' />,
+        <ColumnLink key='discord' icon='commenting' text={intl.formatMessage(messages.discord)} href='https://discord.gg/uW2dCYm' />,
+        <ColumnLink key= 'quirk' icon='list' text={intl.formatMessage(messages.quirk)} href='https://plushrump.neocities.org/quirks.html' />,
         <ColumnLink key='lists' icon='list-ul' text={intl.formatMessage(messages.lists)} to='/lists' />,
       );
 
