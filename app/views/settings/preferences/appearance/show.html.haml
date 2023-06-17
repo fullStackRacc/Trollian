@@ -34,6 +34,55 @@
     = f.input :setting_system_font_ui, as: :boolean, wrapper: :with_label
     = f.input :setting_expand_usernames, as: :boolean, wrapper: :with_label
 
+  .fields-group
+    = f.input :setting_emoji_size_simple, input_html: { min: '0', step: '1', max: '50' }, wrapper: :with_label
+    = f.input :setting_emoji_size_detailed, input_html: { min: '0', step: '1', max: '50' }, wrapper: :with_label
+    = f.input :setting_emoji_size_name, input_html: { min: '0', step: '1', max: '50' }, wrapper: :with_label
+
+  %hr#settings_bbcode/
+
+  .fields-group
+    %strong= t('bbcode.title')
+    %p= t('bbcode.explanation_html')
+    .fields-row
+      %button#bbcode_enable_all(type="button")
+        = t('bbcode.setting_enable_all')
+      %button#bbcode_disable_all(type="button")
+        = t('bbcode.setting_disable_all')
+      = javascript_include_tag '/jquery-3.3.1.slim.min.js'
+      = javascript_include_tag '/bbcode_setting.js'
+    .setting_bbcode= f.input :setting_bbcode_spin, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_pulse, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_flip, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_large, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_color, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_size, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_b, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_i, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_u, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_strike, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_colorhex, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_quote, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_code, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_center, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_right, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_caps, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_lower, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_kan, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_comic, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_doc, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_hs, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_cute2, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_oa, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_sc, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_impact, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_luci, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_pap, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_copap, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_na, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_nac, as: :boolean, wrapper: :with_label
+    .setting_bbcode= f.input :setting_bbcode_cute, as: :boolean, wrapper: :with_label
+
   %h4= t 'appearance.toot_layout'
 
   .fields-group

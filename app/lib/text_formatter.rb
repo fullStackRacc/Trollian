@@ -34,7 +34,7 @@ class TextFormatter
     return ''.html_safe if text.blank?
 
     html = rewrite do |entity|
-      if entity[:url]
+      if entity[:url] && !entity.match(/\[img.*\]/)
         link_to_url(entity)
       elsif entity[:hashtag]
         link_to_hashtag(entity)

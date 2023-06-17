@@ -49,6 +49,44 @@ en:
         phrase: Will be matched regardless of casing in text or content warning of a post
         scopes: Which APIs the application will be allowed to access. If you select a top-level scope, you don't need to select individual ones.
         setting_aggregate_reblogs: Do not show new boosts for posts that have been recently boosted (only affects newly-received boosts)
+        setting_emoji_size_simple: "Simple toot emoji size (default: 20)"
+        setting_emoji_size_detailed: "Detailed toot emoji size (default: 24)"
+        setting_emoji_size_name: "Display name emoji size (default: 16)"
+        setting_bbcode_title: Enable Or Disable Individual BBCode Options
+        setting_bbcode_explaination_html: Turn off any BBCode you don't want to see others use!
+        setting_bbcode_enable_all: Enable All
+        setting_bbcode_disable_all: Disable All
+        setting_bbcode_spin: 'BBCode [spin]'
+        setting_bbcode_pulse: 'BBCode [pulse]'
+        setting_bbcode_flip: 'BBCode [flip]'
+        setting_bbcode_large: 'BBCode [large]'
+        setting_bbcode_size: 'BBCode [size]'
+        setting_bbcode_color: 'BBCode [color] and [colorhex]'
+        setting_bbcode_b: 'BBCode [b]'
+        setting_bbcode_i: 'BBCode [i]'
+        setting_bbcode_u: 'BBCode [u]'
+        setting_bbcode_strike: 'BBCode [strike]'
+        setting_bbcode_colorhex: 'BBCode [colorhex]'
+        setting_bbcode_quote: 'BBCode [quote]'
+        setting_bbcode_code: 'BBCode [code]'
+        setting_bbcode_center: 'BBCode [center]'
+        setting_bbcode_right: 'BBCode [right]'
+        setting_bbcode_caps: 'BBCode [caps]'
+        setting_bbcode_lower: 'BBCode [lower]'
+        setting_bbcode_kan: 'BBCode [kan]'
+        setting_bbcode_comic: 'BBCode [comic]'
+        setting_bbcode_doc: 'BBCode [doc]'
+        setting_bbcode_hs: 'BBCode [hs]'
+        setting_bbcode_cute2: 'BBCode [cute2]'
+        setting_bbcode_oa: 'BBCode [oa]'
+        setting_bbcode_sc: 'BBCode [sc]'
+        setting_bbcode_impact: 'BBCode [impact]'
+        setting_bbcode_luci: 'BBCode [luci]'
+        setting_bbcode_pap: 'BBCode [pap]'
+        setting_bbcode_copap: 'BBCode [copap]'
+        setting_bbcode_na: 'BBCode [na]'
+        setting_bbcode_nac: 'BBCode [nac]'
+        setting_bbcode_cute: 'BBCode [cute]'
         setting_always_send_emails: Normally e-mail notifications won't be sent when you are actively using Mastodon
         setting_default_federation: <ul><li>If checked, your new posts federate to other instances unless manually changed while composing in the web interface.</li><li>If unchecked, your new posts stay local unless manually changed while composing in the web interface.</li><li>Third party apps will make new posts that respect this setting. <a href="https://github.com/hometown-fork/hometown/wiki/Local-only-posting#note-on-3rd-party-apps">See here for more info on third-party apps</a></li></ul>
         setting_default_sensitive: Sensitive media is hidden by default and can be revealed with a click
