@@ -53,6 +53,10 @@ module FormattingHelper
     html_aware_format(account.note, account.local?)
   end
 
+  def display_name_format(account)
+    html_aware_format(account.display_name, account.local?)
+  end
+
   def article_format(text)
     html_aware_format(text, false)
   end

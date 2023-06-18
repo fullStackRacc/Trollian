@@ -69,7 +69,7 @@ class REST::AccountSerializer < ActiveModel::Serializer
   end
 
   def display_name
-    object.suspended? ? '' : object.display_name
+    object.suspended? ? '' : display_name_format(object)
   end
 
   def locked
