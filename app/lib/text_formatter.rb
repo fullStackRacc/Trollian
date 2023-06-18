@@ -34,7 +34,7 @@ class TextFormatter
     return ''.html_safe if text.blank?
 
     html = rewrite do |entity|
-      if entity[:url] && !entity.match(/\[img.*\]/)
+      if entity[:url]
         link_to_url(entity)
       elsif entity[:hashtag]
         link_to_hashtag(entity)
@@ -43,6 +43,15 @@ class TextFormatter
       end
     end
 
+    html = simple_format(html, {}, sanitize: false).delete("\n") if multiline?
+    html = format_bbcode(html)
+
+    html.html_safe # rubocop:disable Rails/OutputSafety
+  end
+
+  def to_s_no_link
+    return ''.html_safe if text.blank?
+    html = text
     html = simple_format(html, {}, sanitize: false).delete("\n") if multiline?
     html = format_bbcode(html)
 
@@ -157,7 +166,7 @@ class TextFormatter
     preloaded_accounts.present?
   end
 
- def format_bbcode(html)
+  def format_bbcode(html)
     begin
       allowed_bbcodes = [:i, :b, :color, :quote, :code, :size, :u, :strike, :spin, :pulse, :flip, :large, :colorhex, :hex, :quote, :code, :center, :right, :url, :caps, :lower, :kan, :comic, :doc, :hs, :cute2, :oa, :sc, :impact, :luci, :pap, :copap, :na, :nac, :cute, :img, :faicon]
       html = html.bbcode_to_html(false, {

@@ -6,7 +6,12 @@ module FormattingHelper
   end
 
   def linkify(text, options = {})
-    TextFormatter.new(text, options).to_s
+    useless = text.match(/\[img.*\]/)
+    if useless == nil
+      TextFormatter.new(text, options).to_s
+    else
+      TextFormatter.new(text, options).to_s_no_link
+    end
   end
 
   def extract_status_plain_text(status)
