@@ -99,7 +99,7 @@ class ActivityPub::ActorSerializer < ActivityPub::Serializer
   end
 
   def name
-    object.suspended? ? '' : object.display_name
+    object.suspended? ? '' : display_name_format(object)
   end
 
   def summary

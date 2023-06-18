@@ -21,7 +21,7 @@
           = image_tag @report.target_account.avatar.url, alt: ''
         .display-name
           %bdi
-            %strong.emojify.p-name= display_name(@report.target_account, custom_emojify: true)
+            %strong.emojify.p-name= display_name(display_name_format(@report.target_account), custom_emojify: true)
           %span
             = acct(@report.target_account)
             = fa_icon('lock') if @report.target_account.locked?
