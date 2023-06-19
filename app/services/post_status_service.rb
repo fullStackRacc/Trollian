@@ -219,14 +219,14 @@ class PostStatusService < BaseService
   end
 
   def quirkify_text(account, text)
-    result = text
+    result = text.strip
     quirks = @account.quirk.split(',')
     regexes = @account.regex.split(',')
     if quirks.length == regexes.length
       regexes.length.times do |i|
       exceptions = result.scan(/(?::\w+:|@\S+|https?:\/\/\S+|\[[^\]]+\])/)
       result = safe_hold(result, exceptions)
-      result = result.gsub(Regexp.new(regexes[i]), quirks[i])
+      result = result.gsub(Regexp.new(regexes[i], Regexp::MULTILINE), quirks[i])
       result = safe_return(result, exceptions)
       end
     end

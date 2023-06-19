@@ -168,7 +168,7 @@ class TextFormatter
 
   def format_bbcode(html)
     begin
-      allowed_bbcodes = [:i, :b, :color, :quote, :code, :size, :u, :strike, :spin, :pulse, :flip, :large, :colorhex, :hex, :quote, :code, :center, :right, :url, :caps, :lower, :kan, :comic, :doc, :hs, :cute2, :oa, :sc, :impact, :luci, :pap, :copap, :na, :nac, :cute, :img, :faicon]
+      allowed_bbcodes = [:i, :b, :color, :quote, :code, :size, :u, :strike, :spin, :pulse, :flip, :large, :colorhex, :hex, :quote, :code, :center, :right, :url, :caps, :lower, :kan, :comic, :doc, :hs, :cute2, :oa, :sc, :impact, :luci, :pap, :copap, :na, :nac, :cute, :img, :faicon, :break,]
       html = html.bbcode_to_html(false, {
         :spin => {
           :html_open => '<span class="bbcode__spin">', :html_close => '</span>',
@@ -345,7 +345,11 @@ class TextFormatter
           :description => 'Use Font Awesome Icons',
           :example => '[faicon]users[/faicon]',
           :only_allow => [],
-          :require_between => true},        
+          :require_between => true},
+         :break => {
+          :html_open => '<br />', :html_close => '',
+          :description => 'Insert a line break',
+          :example => 'This is [break]bold[/break]'},
       }, :enable, *allowed_bbcodes)
     rescue Exception => e
     end
