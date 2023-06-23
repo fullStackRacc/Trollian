@@ -168,7 +168,7 @@ class TextFormatter
 
   def format_bbcode(html)
     begin
-      allowed_bbcodes = [:i, :b, :color, :quote, :code, :size, :u, :strike, :spin, :pulse, :flip, :large, :colorhex, :hex, :quote, :code, :center, :right, :url, :caps, :lower, :kan, :comic, :doc, :hs, :cute2, :oa, :sc, :impact, :luci, :pap, :copap, :na, :nac, :cute, :img, :faicon, :break,]
+      allowed_bbcodes = [:i, :b, :color, :quote, :code, :size, :u, :strike, :spin, :pulse, :flip, :large, :colorhex, :hex, :quote, :code, :center, :right, :url, :caps, :lower, :kan, :comic, :doc, :hs, :yan, :oa, :sc, :impact, :luci, :pap, :copap, :na, :nac, :cute, :img, :faicon, :break, :joke, :u, :book,]
       html = html.bbcode_to_html(false, {
         :spin => {
           :html_open => '<span class="bbcode__spin">', :html_close => '</span>',
@@ -182,6 +182,10 @@ class TextFormatter
           :html_open => '<span class="bbcode__b">', :html_close => '</span>',
           :description => 'Make text bold',
           :example => 'This is [b]bold[/b].'},
+        :u => {
+          :html_open => '<span class="bbcode__u">', :html_close => '</span>',
+          :description => 'Make text underlined',
+          :example => 'This is [u]underline[/u].'},
         :i => {
           :html_open => '<span class="bbcode__i">', :html_close => '</span>',
           :description => 'Make text italic',
@@ -288,10 +292,10 @@ class TextFormatter
           :html_open => '<span class="bbcode__hs">', :html_close => '</span>',
           :description => 'Courier New',
           :example => 'This is [hs]Courier New[/hs].'},
-        :cute2 => {
-          :html_open => '<span class="bbcode__cute2">', :html_close => '</span>',
+        :yan => {
+          :html_open => '<span class="bbcode__yan">', :html_close => '</span>',
           :description => 'CUTE',
-          :example => 'This is [cute2]CUTE[/cute2].'},
+          :example => 'This is [yan]CUTE[/yan].'},
         :oa => {
           :html_open => '<span class="bbcode__oa">', :html_close => '</span>',
           :description => 'Old Alternian',
@@ -350,6 +354,14 @@ class TextFormatter
           :html_open => '<br />', :html_close => '',
           :description => 'Insert a line break',
           :example => 'This is [break]bold[/break]'},
+        :joke => {
+          :html_open => '<span class="bbcode__joke">', :html_close => '</span>',
+          :description => 'Joke',
+          :example => 'This is [joke]Joke[/joke].'},
+        :book => {
+          :html_open => '<span class="bbcode__book">', :html_close => '</span>',
+          :description => 'Book',
+          :example => 'This is [book]Book[/book].'},
       }, :enable, *allowed_bbcodes)
     rescue Exception => e
     end

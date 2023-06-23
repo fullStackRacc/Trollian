@@ -39,8 +39,22 @@ $bbcode2: lighten($black, 15%) !default;
     src: url(fonts/NewAlternianVers3-Regular.woff);
   }
 
+@font-face {
+    font-family: "Jokerman";
+    src: url(fonts/Jokerman-Regular.woff);
+  }
+
+@font-face {
+    font-family: "BookAntiqua";
+    src: url(fonts/book-antiqua.woff);
+  }
+
 .bbcode__s {
   text-decoration: line-through;
+}
+
+.bbcode__u {
+  text-decoration: underline;
 }
 
 .bbcode__b {
@@ -172,7 +186,7 @@ pre {
     font-family: "Courier New", Courier, monospace;
   }
 
-.bbcode__cute2 {
+.bbcode__yan {
     font-family: "YANDERE";
   }
 
@@ -211,6 +225,14 @@ pre {
 .bbcode__nac{
     font-family: "NewAlternianCourier";
     font-size: 6px;
+  }
+
+.bbcode__joke{
+    font-family: "Jokerman";
+  }
+
+.bbcode__book{
+    font-family: "BookAntiqua";
   }
 
 .bbcode__faicon {

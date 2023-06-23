@@ -1,0 +1,6 @@
+--2023-06-21 20:24:15--  https://storage.cloudconvert.com/tasks/adc3827e-7ee7-43e6-9789-5e02e5046f55/Jokerman-Regular.woff?AWSAccessKeyId=cloudconvert-production
+Resolving storage.cloudconvert.com (storage.cloudconvert.com)... 2001:41d0:700:3169::, 2001:41d0:700:316c::, 2001:41d0:700:3cc2::, ...
+Connecting to storage.cloudconvert.com (storage.cloudconvert.com)|2001:41d0:700:3169::|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2023-06-21 20:24:15 ERROR 403: Forbidden.
+
