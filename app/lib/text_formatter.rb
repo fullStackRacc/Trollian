@@ -168,7 +168,7 @@ class TextFormatter
 
   def format_bbcode(html)
     begin
-      allowed_bbcodes = [:i, :b, :color, :quote, :code, :size, :u, :strike, :spin, :pulse, :flip, :large, :colorhex, :hex, :quote, :code, :center, :right, :url, :caps, :lower, :kan, :comic, :doc, :hs, :yan, :oa, :sc, :impact, :luci, :pap, :copap, :na, :nac, :cute, :img, :faicon, :break, :joke, :u, :book,]
+      allowed_bbcodes = [:i, :b, :color, :quote, :code, :size, :u, :strike, :spin, :pulse, :flip, :large, :colorhex, :hex, :quote, :code, :center, :right, :url, :caps, :lower, :kan, :comic, :doc, :hs, :yan, :oa, :sc, :impact, :luci, :pap, :copap, :na, :nac, :cute, :img, :faicon, :break, :joke, :u, :book, :bone,]
       html = html.bbcode_to_html(false, {
         :spin => {
           :html_open => '<span class="bbcode__spin">', :html_close => '</span>',
@@ -362,6 +362,10 @@ class TextFormatter
           :html_open => '<span class="bbcode__book">', :html_close => '</span>',
           :description => 'Book',
           :example => 'This is [book]Book[/book].'},
+        :bone => {
+          :html_open => '<span class="bbcode__bone">', :html_close => '</span>',
+          :description => 'Bone',
+          :example => 'This is [bone]Bones[/bone].'},
       }, :enable, *allowed_bbcodes)
     rescue Exception => e
     end

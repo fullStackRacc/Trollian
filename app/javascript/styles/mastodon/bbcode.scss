@@ -49,6 +49,11 @@ $bbcode2: lighten($black, 15%) !default;
     src: url(fonts/book-antiqua.woff);
   }
 
+@font-face {
+    font-family: "Bones";
+    src: url(fonts/BONEAPA.woff);
+  }
+
 .bbcode__s {
   text-decoration: line-through;
 }
@@ -233,6 +238,10 @@ pre {
 
 .bbcode__book{
     font-family: "BookAntiqua";
+  }
+
+.bbcode__bone{
+    font-family: "Bones";
   }
 
 .bbcode__faicon {

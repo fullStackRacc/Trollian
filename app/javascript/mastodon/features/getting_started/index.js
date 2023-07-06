@@ -116,6 +116,7 @@ class GettingStarted extends ImmutablePureComponent {
         <ColumnSubheading key='header-personal' text={intl.formatMessage(messages.personal)} />,
         <ColumnLink key='home' icon='home' text={intl.formatMessage(messages.home_timeline)} to='/home' />,
         <ColumnLink key='direct' icon='at' text={intl.formatMessage(messages.direct)} to='/conversations' />,
+        <ColumnLink key='notifications' icon='bell' text={intl.formatMessage(messages.notifications)} to='/notifications' />,
         <ColumnLink key='bookmark' icon='bookmark' text={intl.formatMessage(messages.bookmarks)} to='/bookmarks' />,
         <ColumnLink key='favourites' icon='star' text={intl.formatMessage(messages.favourites)} to='/favourites' />,
         <ColumnLink key='discord' icon='commenting' text={intl.formatMessage(messages.discord)} href='https://discord.gg/uW2dCYm' />,
