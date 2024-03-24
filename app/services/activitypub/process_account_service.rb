@@ -59,6 +59,9 @@ class ActivityPub::ProcessAccountService < BaseService
     @account.suspended_at      = domain_block.created_at if auto_suspend?
     @account.suspension_origin = :local if auto_suspend?
     @account.silenced_at       = domain_block.created_at if auto_silence?
+
+    set_immediate_protocol_attributes!
+
     @account.save
   end
 
@@ -254,7 +257,7 @@ class ActivityPub::ProcessAccountService < BaseService
 
   def moved_account
     account   = ActivityPub::TagManager.instance.uri_to_resource(@json['movedTo'], Account)
-    account ||= ActivityPub::FetchRemoteAccountService.new.call(@json['movedTo'], id: true, break_on_redirect: true)
+    account ||= ActivityPub::FetchRemoteAccountService.new.call(@json['movedTo'], break_on_redirect: true)
     account
   end
 
