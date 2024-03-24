@@ -13,7 +13,7 @@ module Mastodon
     end
 
     def patch
-      8
+      15
     end
 
     def flags
@@ -21,7 +21,7 @@ module Mastodon
     end
 
     def suffix
-      '+hometown-1.1.1'
+      '+hometown-1.1.1+trollian1.0'
     end
 
     def to_a
@@ -33,11 +33,11 @@ module Mastodon
     end
 
     def repository
-      ENV.fetch('GITHUB_REPOSITORY', 'conclaveGuardian/Trollian')
+      ENV.fetch('GITHUB_REPOSITORY', 'fullStackRacc/trollian')
     end
 
     def source_base_url
-      ENV.fetch('SOURCE_BASE_URL', "https://codeberg.org/#{repository}")
+      ENV.fetch('SOURCE_BASE_URL', "https://gittea.beloisehuffstutler.codes/#{repository}")
     end
 
     # specify git tag or commit hash here

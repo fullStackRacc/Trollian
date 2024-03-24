@@ -655,25 +655,24 @@ const startWorker = async (workerId) => {
     const listener = message => {
       const { event, payload } = message;
 
-      const transmit = () => {
-        const now = new Date().getTime();
-        const delta = now - queued_at;
-        const encodedPayload = typeof payload === 'object' ? JSON.stringify(payload) : payload;
-
-        log.silly(req.requestId, `Transmitting for ${accountId}: ${event} ${encodedPayload} Delay: ${delta}ms`);
-        output(event, encodedPayload);
-      };
-
       // Only send local-only statuses to logged-in users
       if (payload.local_only && !req.accountId) {
         log.silly(req.requestId, `Message ${payload.id} filtered because it was local-only`);
         return;
       }
 
-      // Only messages that may require filtering are statuses, since notifications
-      // are already personalized and deletes do not matter
-      if (!needsFiltering || event !== 'update') {
-        transmit();
+      // Streaming only needs to apply filtering to some channels and only to
+      // some events. This is because majority of the filtering happens on the
+      // Ruby on Rails side when producing the event for streaming.
+      //
+      // The only events that require filtering from the streaming server are
+      // `update` and `status.update`, all other events are transmitted to the
+      // client as soon as they're received (pass-through).
+      //
+      // The channels that need filtering are determined in the function
+      // `channelNameToIds` defined below:
+      if (!needsFiltering || (event !== 'update' && event !== 'status.update')) {
+        transmit(event, payload);
         return;
       }
 
